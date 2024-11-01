@@ -40,45 +40,55 @@ import math
 # print(logging.error("This is an error message")) #error message
 # print(logging.warning("This is a warning message")) #warning message
 
-#Calculate area of major objects
-def circleArea():
-    while True:
-        try:
-            pi = 3.142
-            radius = int(input("Enter the radius: \n"))
-            return pi * radius * radius
-        except ValueError:
-            print("You have not entered a valid number for length or breadth")
-def ValidateUserEntry():
-    while True:
-        try:
-            length = float(input("Enter the length: \n"))
-            breadth = float(input("Enter the breadth: \n"))
-            return breadth*length
-        except ValueError:
-            print("You have not entered a valid number for length or breadth")
-def Squareside():
-    while True:
-        try:
-            side = float(input("Enter the side: \n"))
-            return side
-        except ValueError:
-            print("You have not entered a valid number")
+# #Calculate area of major objects
+# def circleArea():
+#     while True:
+#         try:
+#             pi = 3.142
+#             radius = int(input("Enter the radius: \n"))
+#             return pi * radius * radius
+#         except ValueError:
+#             print("You have not entered a valid number for length or breadth")
+# def ValidateUserEntry():
+#     while True:
+#         try:
+#             length = float(input("Enter the length: \n"))
+#             breadth = float(input("Enter the breadth: \n"))
+#             return breadth*length
+#         except ValueError:
+#             print("You have not entered a valid number for length or breadth")
+# def Squareside():
+#     while True:
+#         try:
+#             side = float(input("Enter the side: \n"))
+#             return side
+#         except ValueError:
+#             print("You have not entered a valid number")
+# # def calculateArea():
 # def calculateArea():
-def calculateArea():
-    selected_shape = input("Enter the shape you want to calculate the area for (square, rectangle, circle): \n")
-    while selected_shape not in ["square", "rectangle", "circle"]:
-        selected_shape = input("Enter the shape you want to calculate the area for: \n")
+#     selected_shape = input("Enter the shape you want to calculate the area for (square, rectangle, circle): \n")
+#     while selected_shape not in ["square", "rectangle", "circle"]:
+#         selected_shape = input("Enter the shape you want to calculate the area for: \n")
+#
+#     if selected_shape == "square":
+#         print(f"The area of the square is {math.pow(Squareside(),2)}")
+#     elif selected_shape == "rectangle":
+#         print(f"The area of the rectangle is {ValidateUserEntry()}")
+#     elif selected_shape == "circle":
+#         print(f"The area of the circle is {circleArea()}")
+#     else:
+#         print("You have not entered the right shape")
+#     return "Your shape is " + selected_shape
+#
+# print(calculateArea())
 
-    if selected_shape == "square":
-        print(f"The area of the square is {math.pow(Squareside(),2)}")
-    elif selected_shape == "rectangle":
-        print(f"The area of the rectangle is {ValidateUserEntry()}")
-    elif selected_shape == "circle":
-        print(f"The area of the circle is {circleArea()}")
-    else:
-        print("You have not entered the right shape")
-    return "Your shape is " + selected_shape
+# Create a File
+password=input("Enter your secret super password: ")
+file=open("secret.txt", "w")
+file.write(password)
+file.close()
 
-print(calculateArea())
+# Read a File
+
+
 
