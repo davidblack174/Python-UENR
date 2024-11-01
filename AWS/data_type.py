@@ -66,11 +66,12 @@ for i,p,k in zip(list, index, index1):
 # print(type({})) #dict
 
 #dictionary data type
-dictionary={"name":"John", "age":25, "school":"UENR"}
-print(dictionary["name"])
-print(dictionary["age"])
-print(dictionary["school"])
-print(dictionary.update({"name":"Kwame","department":"IT"}))
-print(dictionary["name"])
-print(dictionary.keys())
-print(dictionary.values())
+# dictionary={"name":"John", "age":25, "school":"UENR"}
+# print(dictionary["name"])
+# print(dictionary["age"])
+# print(dictionary["school"])
+# print(dictionary.update({"name":"Kwame","department":"IT"}))
+# print(dictionary["name"])
+# print(dictionary.keys())
+# print(dictionary.values())
+
