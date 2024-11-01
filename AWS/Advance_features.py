@@ -1,6 +1,5 @@
 from os import system
-import logging
-
+import math
 
 
 #Flow Control
@@ -42,37 +41,44 @@ import logging
 # print(logging.warning("This is a warning message")) #warning message
 
 #Calculate area of major objects
+def circleArea():
+    while True:
+        try:
+            pi = 3.142
+            radius = int(input("Enter the radius: \n"))
+            return pi * radius * radius
+        except ValueError:
+            print("You have not entered a valid number for length or breadth")
+def ValidateUserEntry():
+    while True:
+        try:
+            length = float(input("Enter the length: \n"))
+            breadth = float(input("Enter the breadth: \n"))
+            return breadth*length
+        except ValueError:
+            print("You have not entered a valid number for length or breadth")
+def Squareside():
+    while True:
+        try:
+            side = float(input("Enter the side: \n"))
+            return side
+        except ValueError:
+            print("You have not entered a valid number")
 # def calculateArea():
 def calculateArea():
-    #Calculate the area of a square
-    selected_shape = input("Enter the shape you want to calculate the area for either one of the following shape (square, rectangle, circle): \n")
-    while selected_shape != "square" and selected_shape != "rectangle" and selected_shape != "circle":
+    selected_shape = input("Enter the shape you want to calculate the area for (square, rectangle, circle): \n")
+    while selected_shape not in ["square", "rectangle", "circle"]:
         selected_shape = input("Enter the shape you want to calculate the area for: \n")
+
     if selected_shape == "square":
-        square = Squareside() * Squareside()
-        print(f"The area of the square is {square}")
+        print(f"The area of the square is {math.pow(Squareside(),2)}")
     elif selected_shape == "rectangle":
-        length = int(input("Enter the length: \n"))
-        breadth = int(input("Enter the breadth: \n"))
-        rectangle = length * breadth
-        print(f"The area of the rectangle is {rectangle}")
+        print(f"The area of the rectangle is {ValidateUserEntry()}")
     elif selected_shape == "circle":
-        pi = 3.142
-        radius = int(input("Enter the radius: \n"))
-        circle = pi * radius * radius
-        print(f"The area of the circle is {circle}")
+        print(f"The area of the circle is {circleArea()}")
     else:
-        print("You have not enter the right number")
-
-
-def Squareside():
-    side = int(input("Enter the side: \n")).is_integer()
-    while side != True:
-        side=int(input("Enter the side: \n")).is_integer()
-        if side == False:
-            print("You have not entered a wrong number")
-
-
+        print("You have not entered the right shape")
+    return "Your shape is " + selected_shape
 
 print(calculateArea())
 
