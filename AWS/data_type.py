@@ -1,4 +1,4 @@
-
+from Advance_features import calculateArea as ca
 
 #Composion of data type
 #int, float, str, bool, NoneType, list, dict
@@ -75,3 +75,5 @@ for i,p,k in zip(list, index, index1):
 # print(dictionary.keys())
 # print(dictionary.values())
 
+print(ca)
+exit()
