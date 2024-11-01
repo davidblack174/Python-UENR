@@ -1,3 +1,4 @@
+import os
 from os import system
 import math
 
@@ -92,4 +93,4 @@ import math
 # file=open("secret.txt", "r")
 # print(file.read())
 
-
+os.system("powershell.exe Get-Process")
