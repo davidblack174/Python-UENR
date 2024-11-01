@@ -83,12 +83,13 @@ import math
 # print(calculateArea())
 
 # Create a File
-password=input("Enter your secret super password: ")
-file=open("secret.txt", "w")
-file.write(password)
-file.close()
+# password=input("Enter your secret super password: ")
+# file=open("secret.txt", "w")
+# file.write(password)
+# file.close()
 
-# Read a File
-
+# # Read a File
+# file=open("secret.txt", "r")
+# print(file.read())
 
 
